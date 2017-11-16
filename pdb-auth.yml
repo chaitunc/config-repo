@@ -26,3 +26,7 @@ security:
     resource:
         userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
         preferTokenInfo: false
+
+pdb:
+    app:
+        homeUrl: https://pdb-gateway.herokuapp.com/home
