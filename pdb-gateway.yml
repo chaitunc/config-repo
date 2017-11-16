@@ -16,11 +16,11 @@ zuul:
         auth-service-redirect:
             path: /login
             sensitiveHeaders:
-            url: https://grim-coffin-41549.herokuapp.com/login
+            url: https://pdb-auth.herokuapp.com/login
         auth-service:
             path: /api/**
             sensitiveHeaders:
-            url: https://grim-coffin-41549.herokuapp.com/
+            url: https://pdb-auth.herokuapp.com/
     
 ribbon:
   eureka:
