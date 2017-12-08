@@ -29,9 +29,7 @@ security:
     resource:
       user-info-uri: http://localhost:8889/me
         
-logging:
-  level:
-    root: DEBUG
+
     
 zuul:
     ignoredServices: '*'
