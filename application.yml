@@ -5,7 +5,7 @@ logging:
 google:    
     client:
       clientId: 55635804291-3jra80gdoe38doclrihauin01c74h1pu.apps.googleusercontent.com
-      clientSecret: Ahu22O58fOQrGKGPzq9SDDTY
+      clientSecret: ${GOOGLE_CLIENT_SECRET}
       accessTokenUri: https://www.googleapis.com/oauth2/v4/token
       userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
       clientAuthenticationScheme: form
@@ -23,7 +23,7 @@ google:
 github:
   client:
     clientId: 20ce4acc770aecb48cb7
-    clientSecret: 0871413404b336776d04c62a0dc8fab22337a551
+    clientSecret: ${GITHUB_CLIENT_SECRET}
     accessTokenUri: https://github.com/login/oauth/access_token
     userAuthorizationUri: https://github.com/login/oauth/authorize
     clientAuthenticationScheme: form
@@ -48,12 +48,12 @@ spring:
 google:    
     client:
       clientId: 55635804291-3jra80gdoe38doclrihauin01c74h1pu.apps.googleusercontent.com
-      clientSecret: Ahu22O58fOQrGKGPzq9SDDTY
+      clientSecret: ${GOOGLE_CLIENT_SECRET}
         
 github:
   client:
     clientId: 20ce4acc770aecb48cb7
-    clientSecret: 0871413404b336776d04c62a0dc8fab22337a551
+    clientSecret: ${GITHUB_CLIENT_SECRET}
 
 
 eureka:
