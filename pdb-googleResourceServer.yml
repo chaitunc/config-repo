@@ -20,6 +20,6 @@ pdb:
     auth:
         client:
             google:
-                secret: PDB-GOOGLE
+                secret: ${PDB-GOOGLE}
             check_token:
                 url: http://pdb-auth/oauth/check_token

@@ -16,6 +16,6 @@ pdb:
     auth:
         client:
             github:
-                secret: PDB-GITHUB
+                secret: ${PDB-GITHUB}
             check_token:
                 url: http://pdb-auth/oauth/check_token    

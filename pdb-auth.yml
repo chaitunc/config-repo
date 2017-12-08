@@ -15,11 +15,11 @@ pdb:
     auth:
         client:
             google:
-                secret: PDB-GOOGLE
+                secret: ${PDB-GOOGLE}
             github:
-                secret: PDB-GITHUB
+                secret: ${PDB-GITHUB}
             gateway:
-                secret: PDB-GATEWAY    
+                secret: ${PDB-GATEWAY}    
 
 eureka:
   instance:
