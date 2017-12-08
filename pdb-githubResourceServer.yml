@@ -1,0 +1,21 @@
+management:
+    security:
+        enabled : false
+        
+
+---
+spring:
+  profiles: local
+
+
+server:
+    port: 6666
+    context-path: /pdb-github
+
+pdb:
+    auth:
+        client:
+            github:
+                secret: PDB-GITHUB
+            check_token:
+                url: http://pdb-auth/oauth/check_token    

@@ -1,0 +1,25 @@
+logging:
+  level:
+    root: DEBUG
+
+management:
+    security:
+        enabled : false
+        
+   
+
+---
+spring:
+  profiles: local
+        
+server:
+    port: 7777
+    context-path: /pdb-google
+
+pdb:
+    auth:
+        client:
+            google:
+                secret: PDB-GOOGLE
+            check_token:
+                url: http://pdb-auth/oauth/check_token

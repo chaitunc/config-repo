@@ -1,0 +1,76 @@
+logging:
+  level:
+    root: DEBUG
+
+google:    
+    client:
+      clientId: 55635804291-3jra80gdoe38doclrihauin01c74h1pu.apps.googleusercontent.com
+      clientSecret: Ahu22O58fOQrGKGPzq9SDDTY
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+        - https://www.googleapis.com/auth/drive
+    resource:
+        id: GOOGLE 
+        userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+        preferTokenInfo: false
+
+        
+github:
+  client:
+    clientId: 20ce4acc770aecb48cb7
+    clientSecret: 0871413404b336776d04c62a0dc8fab22337a551
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    id: GITHUB
+    userInfoUri: https://api.github.com/user 
+
+
+http:
+    mappers:
+        jsonPrettyPrint: true
+    
+---
+spring:
+  profiles: local
+  datasource:
+        jdbcUrl: jdbc:h2:tcp://localhost/~/test
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+
+google:    
+    client:
+      clientId: 55635804291-3jra80gdoe38doclrihauin01c74h1pu.apps.googleusercontent.com
+      clientSecret: Ahu22O58fOQrGKGPzq9SDDTY
+        
+github:
+  client:
+    clientId: 20ce4acc770aecb48cb7
+    clientSecret: 0871413404b336776d04c62a0dc8fab22337a551
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+    metadataMap:
+        instanceId: ${spring.application.name}:${spring.application.instance_id}
+        management:
+            context-path: ${server.context-path}
+    statusPageUrlPath: ${server.context-path}/info
+    healthCheckUrlPath: ${server.context-path}/health    
+    
+proxy:
+  auth:
+    routes:
+      pdb-auth: oauth2
+      

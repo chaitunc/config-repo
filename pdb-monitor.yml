@@ -1,0 +1,23 @@
+management:
+    security:
+        enabled : false
+        
+
+---
+spring:
+  profiles: local
+
+logging:
+  level:
+    root: INFO
+    
+server:
+    port: 9876
+    context-path: /pdb-monitor
+
+turbine:
+    stream:
+        port: 6789
+    aggregator:
+        clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
+        appConfig: SAMPLE-HYSTRIX-AGGREGATE    
