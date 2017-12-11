@@ -49,12 +49,8 @@ eureka:
       defaultZone: ${EUREKA_URI:https://pdb-registry.herokuapp.com/eureka/}
   instance:
     preferIpAddress: false
-    metadataMap:
-        instanceId: ${spring.application.name}:${spring.application.instance_id}
-        management:
-            context-path: ${server.context-path}
-    statusPageUrlPath: ${server.context-path}/info
-    healthCheckUrlPath: ${server.context-path}/health    
+    
+
     
 ---
 spring:

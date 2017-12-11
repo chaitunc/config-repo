@@ -14,13 +14,7 @@ pdb:
             gateway:
                 secret: ${PDB-GATEWAY}
 
-eureka:
-  instance:
-    metadataMap:
-        management:
-            context-path: 
-    statusPageUrlPath: /info
-    healthCheckUrlPath: /health    
+
                           
 ---
 spring:
