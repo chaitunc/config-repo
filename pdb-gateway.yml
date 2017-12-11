@@ -9,7 +9,17 @@ ribbon:
     enabled: true
   restclient:
     enabled: true
-    
+
+security:
+  oauth2:
+    client:
+      client-id: PDB-GATEWAY
+      client-secret: PDB-GATEWAY
+      access-token-uri: https://pdb-auth.herokuapp.com/oauth/token
+      user-authorization-uri: https://pdb-auth.herokuapp.com/oauth/authorize
+      scope: read
+    resource:
+      user-info-uri: https://pdb-auth.herokuapp.com/me    
 ---
 spring:
   profiles: local
