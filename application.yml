@@ -36,13 +36,13 @@ http:
     mappers:
         jsonPrettyPrint: true
     
+
 spring:
   datasource:
-        jdbcUrl: jdbc:h2:tcp://pdb-token-db.herokuapp.com/~/test
-        username: sa
-        password:
-        driver-class-name: org.h2.Driver
-
+        url: jdbc:postgresql://ec2-54-243-211-197.compute-1.amazonaws.com:5432/d96e56s8l7b330?sslmode=require
+        username: wpqkyulvdisaoi
+        password: c547f06858c8ed4a509232761ceb1a0e0662e7269cd66c969547f6abac3ea757
+        driver-class-name: org.postgresql.Driver
 
 ---
 spring:
