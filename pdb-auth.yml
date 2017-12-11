@@ -12,7 +12,8 @@ pdb:
             github:
                 secret: ${PDB-GITHUB}
             gateway:
-                secret: ${PDB-GATEWAY}   
+                secret: ${PDB-GATEWAY}
+                      
 ---
 spring:
   profiles: local
@@ -20,7 +21,17 @@ spring:
 server:
     port: 8889
     
- 
+pdb:
+    app:
+        homeUrl: http://pdb-gateway/pdb-gateway/home
+    auth:
+        client:
+            google:
+                secret: PDB-GOOGLE
+            github:
+                secret: PDB-GITHUB
+            gateway:
+                secret: PDB-GATEWAY 
 
 eureka:
   instance:

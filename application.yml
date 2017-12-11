@@ -46,7 +46,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:https://pdb-registry.herokuapp.com/}
+      defaultZone: ${EUREKA_URI:https://pdb-registry.herokuapp.com/eureka/}
   instance:
     preferIpAddress: false
     metadataMap:
@@ -60,10 +60,9 @@ eureka:
 spring:
   profiles: local
   datasource:
-        jdbcUrl: jdbc:h2:tcp://localhost/~/test
-        username: sa
-        password:
-        driver-class-name: org.h2.Driver
+        jdbcUrl: jdbc:postgresql://ec2-54-243-211-197.compute-1.amazonaws.com:5432/d96e56s8l7b330?sslmode=require
+        username: wpqkyulvdisaoi
+        password: c547f06858c8ed4a509232761ceb1a0e0662e7269cd66c969547f6abac3ea757
 
 google:    
     client:
