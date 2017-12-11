@@ -4,7 +4,7 @@ management:
 
 pdb:
     app:
-        homeUrl: http://pdb-gateway/pdb-gateway/home
+        homeUrl: http://pdb-gateway/home
     auth:
         client:
             google:
