@@ -43,6 +43,19 @@ spring:
         username: wpqkyulvdisaoi
         password: c547f06858c8ed4a509232761ceb1a0e0662e7269cd66c969547f6abac3ea757
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:https://pdb-registry.herokuapp.com/}
+  instance:
+    preferIpAddress: false
+    metadataMap:
+        instanceId: ${spring.application.name}:${spring.application.instance_id}
+        management:
+            context-path: ${server.context-path}
+    statusPageUrlPath: ${server.context-path}/info
+    healthCheckUrlPath: ${server.context-path}/health    
+    
 ---
 spring:
   profiles: local
@@ -67,14 +80,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: false
-    metadataMap:
-        instanceId: ${spring.application.name}:${spring.application.instance_id}
-        management:
-            context-path: ${server.context-path}
-    statusPageUrlPath: ${server.context-path}/info
-    healthCheckUrlPath: ${server.context-path}/health    
     
 proxy:
   auth:
