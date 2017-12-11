@@ -48,7 +48,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI:https://pdb-registry.herokuapp.com/eureka/}
   instance:
-    preferIpAddress: false
+    preferIpAddress: true
     
 
     
