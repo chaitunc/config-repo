@@ -14,7 +14,9 @@ pdb:
             gateway:
                 secret: ${PDB-GATEWAY}
 
-
+eureka:
+  instance:
+    hostname: pdb-auth.herokuapp.com
                           
 ---
 spring:
