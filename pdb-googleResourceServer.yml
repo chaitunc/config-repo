@@ -6,6 +6,13 @@ eureka:
   instance:
     hostname: pdb-google.herokuapp.com   
 
+pdb:
+    auth:
+        client:
+            google:
+                secret: ${PDB-GOOGLE}
+            check_token:
+                url: http://pdb-auth/oauth/check_token
 ---
 spring:
   profiles: local
@@ -14,10 +21,3 @@ server:
     port: 7777
     context-path: /pdb-google
 
-pdb:
-    auth:
-        client:
-            google:
-                secret: ${PDB-GOOGLE}
-            check_token:
-                url: http://pdb-auth/oauth/check_token
