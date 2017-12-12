@@ -39,7 +39,7 @@ http:
 
 spring:
   datasource:
-        jdbcUrl: jdbc:postgresql://@ec2-54-221-204-161.compute-1.amazonaws.com:5432/d1negs71ae1hcm?sslmode=require
+        jdbcUrl: jdbc:postgresql://ec2-54-221-204-161.compute-1.amazonaws.com:5432/d1negs71ae1hcm?sslmode=require
         username: oygevqatpgwbtl
         password: 49d24c1c06bcc93af531ee2fb3eac339ad6e505a0acfebafefc39d43307dae99
 
@@ -56,9 +56,9 @@ eureka:
 spring:
   profiles: local
   datasource:
-        jdbcUrl: jdbc:postgresql://ec2-54-243-211-197.compute-1.amazonaws.com:5432/d96e56s8l7b330?sslmode=require
-        username: wpqkyulvdisaoi
-        password: c547f06858c8ed4a509232761ceb1a0e0662e7269cd66c969547f6abac3ea757
+        jdbcUrl: jdbc:postgresql://ec2-54-221-204-161.compute-1.amazonaws.com:5432/d1negs71ae1hcm?sslmode=require
+        username: oygevqatpgwbtl
+        password: 49d24c1c06bcc93af531ee2fb3eac339ad6e505a0acfebafefc39d43307dae99
 
 google:    
     client:
