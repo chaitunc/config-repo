@@ -2,7 +2,9 @@ management:
     security:
         enabled : false
         
-   
+eureka:
+  instance:
+    hostname: pdb-google.herokuapp.com   
 
 ---
 spring:
