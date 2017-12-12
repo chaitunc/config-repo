@@ -49,7 +49,7 @@ eureka:
       defaultZone: ${EUREKA_URI:https://pdb-registry.herokuapp.com/eureka/}
   instance:
     preferIpAddress: false
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
 
     
 ---
