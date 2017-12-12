@@ -24,6 +24,24 @@ security:
 eureka:
   instance:
     hostname: pdb-gateway.herokuapp.com    
+
+zuul:
+    ignoredServices: '*'
+    routes:
+        user:
+            path: /api/**
+            sensitiveHeaders:
+            serviceId: pdb-auth
+            stripPrefix: true    
+        drive:
+            path: /api-drive/**
+            sensitiveHeaders:
+            serviceId: pdb-googleResourceServer
+        github:
+            path: /api-github/**
+            sensitiveHeaders:
+            serviceId: pdb-githubResourceServer
+        
 ---
 spring:
   profiles: local
@@ -45,20 +63,3 @@ security:
         
 
     
-zuul:
-    ignoredServices: '*'
-    routes:
-        user:
-            path: /api/**
-            sensitiveHeaders:
-            serviceId: pdb-auth
-            stripPrefix: true    
-        drive:
-            path: /api-drive/**
-            sensitiveHeaders:
-            serviceId: pdb-googleResourceServer
-        github:
-            path: /api-github/**
-            sensitiveHeaders:
-            serviceId: pdb-githubResourceServer
-        
